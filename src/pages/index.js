@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Image from "image/next";
 
 const HomePage = () => {
   const images = [
@@ -123,7 +123,7 @@ const HomePage = () => {
       >
         {/* Left Side: Image */}
         <div className="md:w-1/2 h-3/6 md:h-[600px] w-full flex items-center justify-center p-4">
-          <img
+          <Image
             src={images[currentImage]}
             alt="Slideshow"
             className="h-full w-full object-cover rounded-lg shadow-lg"
@@ -159,7 +159,7 @@ const HomePage = () => {
               <p className="text-sm text-gray-500">Illustrator</p>
               <p className="text-sm text-gray-400 mt-2">
                 Passionate about digital painting and character design. Clients
-                include "Fantasy Studio" and "GameMaster".
+                include &quot;Fantasy Studio&quot; and "GameMaster".
               </p>
             </div>
           </div>
