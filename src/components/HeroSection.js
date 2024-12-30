@@ -1,4 +1,9 @@
 export default function HeroSection({ heading, subheading, backgroundImage }) {
+  if (!backgroundImage) {
+    console.error("Background image is missing");
+    return <div>No Image</div>;
+  }
+
   return (
     <div
       className="relative flex items-center justify-center min-h-screen h-screen bg-center"
