@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "image/next";
+import Image from "next/image";
 
 const HomePage = () => {
   const images = [
@@ -126,6 +126,7 @@ const HomePage = () => {
           <Image
             src={images[currentImage]}
             alt="Slideshow"
+            fill
             className="h-full w-full object-cover rounded-lg shadow-lg"
           />
         </div>
@@ -142,8 +143,7 @@ const HomePage = () => {
               <p className="text-sm text-gray-500">Graphic Designer</p>
               <p className="text-sm text-gray-400 mt-2">
                 Specializes in branding, visual identity, and illustration. Over
-                5 years of experience with clients like "Acme Corp" and
-                "CreativeWorks".
+                &quot;Acme Corp&quot; and &quot;CreativeWorks&quot;.
               </p>
             </div>
             <div className="p-4 bg-white rounded-lg shadow-lg">
@@ -159,7 +159,7 @@ const HomePage = () => {
               <p className="text-sm text-gray-500">Illustrator</p>
               <p className="text-sm text-gray-400 mt-2">
                 Passionate about digital painting and character design. Clients
-                include &quot;Fantasy Studio&quot; and "GameMaster".
+                include &quot;Fantasy Studio&quot; and &quot;GameMaster&quot;.
               </p>
             </div>
           </div>

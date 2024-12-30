@@ -7,7 +7,7 @@ const Loginbutton = props => {
     window.location.href = "/sign-up"; // Update the browser's URL
   };
   return (
-    <button onClick={signUp} {...rest}>
+    <button className="" onClick={signUp} {...rest}>
       {children}
     </button>
   );
