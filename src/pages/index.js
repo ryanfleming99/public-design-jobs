@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import React from "react";
 import Navbar from "../components/Navbar"; // Import Navbar
 import HeroSection from "../components/HeroSection";
 import FaqSection from "../components/FaqSection";
