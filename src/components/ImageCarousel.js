@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-const ImageCarousel = ({ scrollToTarget }) => {
+const ImageCarousel = ({}) => {
   const images = [
     "https://res.cloudinary.com/ryry/image/upload/v1728136230/public-design-jobs/ryan-london_zkiowr.webp",
     "https://res.cloudinary.com/ryry/image/upload/v1728136108/public-design-jobs/ry_boi_public_design_job_artwork_wall_outside_london_HDR_arcite_3bd2a794-63c9-49f9-80fd-f4c6d402a75f_gjnjk6.png",

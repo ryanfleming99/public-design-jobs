@@ -1,9 +1,4 @@
-export default function HeroSection({
-  heading,
-  subheading,
-  backgroundImage,
-  targetSection
-}) {
+export default function HeroSection({ heading, subheading, backgroundImage }) {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen h-screen bg-center"
