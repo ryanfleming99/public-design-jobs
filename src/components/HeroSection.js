@@ -1,10 +1,14 @@
-export default function HeroSection() {
+export default function HeroSection({
+  heading,
+  subheading,
+  backgroundImage,
+  targetSection
+}) {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen h-screen bg-center"
       style={{
-        backgroundImage:
-          "url(https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp)"
+        backgroundImage: `url(${backgroundImage})`
       }}
     >
       <div className="relative inset-0 bg-gradient-to-b from-transparent to-white via-transparent via-75%"></div>
@@ -19,21 +23,20 @@ export default function HeroSection() {
               transition: "transform 0.1s ease-out"
             }}
           >
-            Public Design Jobs
+            {heading}
           </h2>
           <p
             className="text-xl mb-6 text-white font-semibold"
             style={{ textShadow: "rgb(0 0 0 / 11%) 2px 2px 8px" }}
           >
-            The new platform for creative freelancers. Find work, showcase your
-            talent, and grow your career.
+            {subheading}
           </p>
         </div>
         <div className="flex justify-center mt-8">
           <div
             className="animate-bounce cursor-pointer"
             onClick={() => {
-              const targetElement = document.getElementById("target-section");
+              const targetElement = document.getElementById("section-two");
               if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth" });
               }
