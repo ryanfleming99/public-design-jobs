@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Public Design Jobs
+
+**Public Design Jobs** is a platform designed to help creatives find work locally and globally. The application enables users to search, apply, and post creative job opportunities seamlessly.
+
+---
+
+## Features
+
+- **Global Job Search:** Discover creative work opportunities around the world.
+- **Local Opportunities:** Find jobs near you with location-based filtering.
+- **Account Management:** Secure sign-up and account creation using Google Authentication.
+- **Email Notifications:** Stay updated with job alerts and notifications via SendGrid.
+- **Modern UI:** Built with Next.js and React for a fast, responsive, and user-friendly experience.
+- **Realtime Data:** Firebase integration for seamless data handling.
+
+---
+
+## Technologies Used
+
+- **Next.js**: For server-side rendering and optimized performance.
+- **React**: For building dynamic user interfaces.
+- **Firebase**: For backend services including database and authentication.
+- **SendGrid**: For handling transactional and notification emails.
+- **Google Sign-In**: To simplify account creation and management.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Ensure you have the following installed on your system:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (v16 or later)
+- npm or yarn
+- Firebase account and project setup
+- SendGrid API key
+- Google API credentials for OAuth
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/public-design-jobs.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd public-design-jobs
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Install dependencies:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Set up environment variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Create a `.env.local` file in the root directory and add the following:
+
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+   NEXT_PUBLIC_SENDGRID_API_KEY=your_sendgrid_api_key
+   NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
+   NEXT_PUBLIC_GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Your application will be available at `http://localhost:3000`.
+
+---
