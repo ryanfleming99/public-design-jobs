@@ -1,4 +1,12 @@
 module.exports = {
-  distDir: "build",
-  trailingSlash: true // Ensure this matches the directory you intend to use
+  distDir: "build", // Keep your existing build directory
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/ryry/image/upload/**"
+      }
+    ]
+  }
 };

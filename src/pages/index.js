@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-const HomePage = () => {
+const Index = () => {
   const images = [
     "https://res.cloudinary.com/ryry/image/upload/v1728136230/public-design-jobs/ryan-london_zkiowr.webp",
     "https://res.cloudinary.com/ryry/image/upload/v1728136108/public-design-jobs/ry_boi_public_design_job_artwork_wall_outside_london_HDR_arcite_3bd2a794-63c9-49f9-80fd-f4c6d402a75f_gjnjk6.png",
@@ -17,7 +17,7 @@ const HomePage = () => {
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImage(prevImage => (prevImage + 1) % images.length);
-    }, 1500); // 1.5-second interval
+    }, 300); // 1.5-second interval
 
     return () => clearInterval(imageInterval); // Cleanup interval
   }, [images.length]);
@@ -28,43 +28,43 @@ const HomePage = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  useEffect(() => {
-    const handleMouseMove = event => {
-      const { clientX, clientY } = event;
-      const { innerWidth, innerHeight } = window;
+  // useEffect(() => {
+  //   const handleMouseMove = event => {
+  //     const { clientX, clientY } = event;
+  //     const { innerWidth, innerHeight } = window;
 
-      // Calculate the position of the mouse relative to the center of the screen
-      const xOffset = (clientX - innerWidth / 2) / innerWidth;
-      const yOffset = (clientY - innerHeight / 2) / innerHeight;
+  //     // Calculate the position of the mouse relative to the center of the screen
+  //     const xOffset = (clientX - innerWidth / 2) / innerWidth;
+  //     const yOffset = (clientY - innerHeight / 2) / innerHeight;
 
-      // Apply transformation based on mouse position
-      if (textRef.current) {
-        textRef.current.style.transform = `translate(${xOffset *
-          30}px, ${yOffset * 30}px) rotate(${xOffset * 10}deg) skewX(${xOffset *
-          5}deg)`;
-      }
-    };
+  //     // Apply transformation based on mouse position
+  //     if (textRef.current) {
+  //       textRef.current.style.transform = `translate(${xOffset *
+  //         30}px, ${yOffset * 30}px) rotate(${xOffset * 10}deg) skewX(${xOffset *
+  //         5}deg)`;
+  //     }
+  //   };
 
-    // Add the mousemove event listener
-    window.addEventListener("mousemove", handleMouseMove);
+  //   // Add the mousemove event listener
+  //   window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  //   // Cleanup event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
 
   return (
     <div>
       {/* Section 1 */}
       <div
-        className="relative flex items-center justify-center min-h-screen h-screen bg-cover bg-center"
+        className="relative flex items-center justify-center min-h-screen h-screen bg-center"
         style={{
           backgroundImage:
             "url(https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp)"
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white via-transparent via-75%"></div>
+        <div className="relative inset-0 bg-gradient-to-b from-transparent to-white via-transparent via-75%"></div>
 
         {/* Text Content over the background */}
         <div className="relative z-10 text-center text-white p-4 flex flex-col items-center justify-center h-full w-full">
@@ -126,7 +126,8 @@ const HomePage = () => {
           <Image
             src={images[currentImage]}
             alt="Slideshow"
-            fill
+            width={500}
+            height={500}
             className="h-full w-full object-cover rounded-lg shadow-lg"
           />
         </div>
@@ -258,4 +259,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Index;
