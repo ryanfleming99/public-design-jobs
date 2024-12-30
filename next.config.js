@@ -1,5 +1,9 @@
 module.exports = {
-  distDir: "build", // Keep your existing build directory
+  distDir: "build",
+  reactStrictMode: true,
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL
+  },
   images: {
     remotePatterns: [
       {
