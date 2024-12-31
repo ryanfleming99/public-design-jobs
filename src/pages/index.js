@@ -1,20 +1,20 @@
 import React from "react";
 import Navbar from "../components/Navbar"; // Import Navbar
-import HeroSection from "../components/HeroSection";
-import FaqSection from "../components/FaqSection";
-import ImageCarousel from "../components/ImageCarousel";
-import Footer from "../components/Footer";
+// import HeroSection from "../components/HeroSection";
+// import FaqSection from "../components/FaqSection";
+// import ImageCarousel from "../components/ImageCarousel";
+// import Footer from "../components/Footer";
 
-export const homepageSections = [
-  {
-    heading: "Public Design Jobs",
-    subheading:
-      "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
-    backgroundImage:
-      "https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp",
-    scrollToTarget: "homepage-section-two"
-  }
-];
+// export const homepageSections = [
+//   {
+//     heading: "Public Design Jobs",
+//     subheading:
+//       "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
+//     backgroundImage:
+//       "https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp",
+//     scrollToTarget: "homepage-section-two"
+//   }
+// ];
 
 const Index = () => {
   // useEffect(() => {
@@ -47,7 +47,7 @@ const Index = () => {
     <div>
       {/* Section 1 */}
       <Navbar /> {/* Navbar is included on every page */}
-      {homepageSections.map((section, index) => (
+      {/* {homepageSections.map((section, index) => (
         <HeroSection
           key={index}
           heading={section.heading}
@@ -58,7 +58,7 @@ const Index = () => {
       ))}
       <ImageCarousel />
       <FaqSection />
-      <Footer />
+      <Footer /> */}
       {/* Centered Bounce Arrow
       <div className="flex justify-center">
         <div
