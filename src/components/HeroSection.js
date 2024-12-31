@@ -15,7 +15,7 @@ export default function HeroSection({ heading, subheading, backgroundImage }) {
 
       {/* Text Content over the background */}
       <div className="relative z-10 text-center text-white p-4 flex flex-col items-center justify-center h-full w-full">
-        <div className="md:w-full text-center md:p-4">
+        <div className="md:w-full text-center md:p-4  justify-center m-auto">
           <h2
             className="md:text-8xl text-4xl font-bold mb-4 md:text-white text-white"
             style={{
