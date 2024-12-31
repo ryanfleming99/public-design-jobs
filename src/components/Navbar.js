@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import AuthButton from "../pages/api/auth/signin";
 
 export default function Navbar() {
