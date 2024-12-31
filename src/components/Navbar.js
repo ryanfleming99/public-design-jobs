@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSession } from "next-auth/react";
 import AuthButton from "../pages/api/auth/signin";
+import Link from "next/link";
 
 export default function Navbar() {
   const { data: session } = useSession();
