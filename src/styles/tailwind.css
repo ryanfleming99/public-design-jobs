@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 rounded font-medium transition duration-200 min-w-48;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
+  }
+}

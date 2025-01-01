@@ -12,7 +12,11 @@ export const homepageSections = [
       "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
     backgroundImage:
       "https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp",
-    scrollToTarget: "homepage-section-two"
+    scrollToTarget: "homepage-section-two",
+    primaryButton: "Join us!",
+    primaryButtonLink: "/about",
+    secondaryButton: "Learn more",
+    secondaryButtonLink: "/support"
   }
 ];
 
@@ -54,6 +58,10 @@ const Index = () => {
           subheading={section.subheading}
           backgroundImage={section.backgroundImage}
           scrollToTarget={section.scrollToTarget}
+          primaryButton={section.primaryButton}
+          primaryButtonLink={section.primaryButtonLink}
+          secondaryButton={section.secondaryButton}
+          secondaryButtonLink={section.secondaryButtonLink}
         />
       ))}
       <ImageCarousel />
