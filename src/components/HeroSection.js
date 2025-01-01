@@ -36,19 +36,23 @@ export default function HeroSection({
             {heading}
           </h2>
           <p
-            className="text-xl mb-6 text-white font-semibold"
+            className="text-xl mb-6 text-white font-semibold m-auto max-w-3xl"
             style={{ textShadow: "rgb(0 0 0 / 11%) 2px 2px 8px" }}
           >
             {subheading}
           </p>
         </div>
         <div className="text-center justify-center m-auto flex space-between gap-6">
-          <Link href={primaryButtonLink} className="btn btn-secondary">
-            {primaryButton}
-          </Link>
-          <Link href={secondaryButtonLink} className="btn btn-primary">
-            {secondaryButton}
-          </Link>
+          {primaryButton && primaryButtonLink && (
+            <Link href={primaryButtonLink} className="btn btn-secondary">
+              {primaryButton}
+            </Link>
+          )}
+          {secondaryButton && secondaryButtonLink && (
+            <Link href={secondaryButtonLink} className="btn btn-primary">
+              {secondaryButton}
+            </Link>
+          )}
         </div>
         <div className="flex justify-center mt-8">
           <div
