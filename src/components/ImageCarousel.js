@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-const ImageCarousel = ({ heading, paragraph, lists, images }) => {
+import Link from "next/link";
+import AuthButton from "../pages/api/auth/signin";
+
+const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImage(prevImage => (prevImage + 1) % images.length);
-    }, 4000); // 1.5-second interval
+    }, 2000); // 1.5-second interval
 
     return () => clearInterval(imageInterval); // Cleanup interval
   }, [images.length]);
 
   return (
     <div>
+      <div className="md:pt-24 w-full flex items-center justify-center flex-col">
+        <p className="text-6xl font-bold mb-8">{mainHeading}</p>
+        <p className="text-2xl text-blue-600 mb-8">{mainParagraph}</p>
+        <AuthButton />
+      </div>
+
       <div
         id="section-two"
         className="flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-24"
       >
         {/* Left Side: Image */}
-        <div className="md:w-1/2 h-3/6 md:h-[600px] w-full flex items-center justify-center">
+        <div className="md:w-1/2 h-3/6 md:h-[600px] max-w-[500px] w-full flex items-center justify-center">
           {images && images.length > 0 ? (
             <Image
               src={images[currentImage]}
@@ -32,16 +41,16 @@ const ImageCarousel = ({ heading, paragraph, lists, images }) => {
           )}
         </div>
         {/* Right Side: Profiles */}
-        <div className="md:w-1/2 text-center md:text-left py-14 px-12">
-          <h2 className="text-4xl font-bold mb-4">{heading}</h2>
-          <p className="text-lg mb-6">{paragraph}</p>
-          <div className="space-y-4">
+        <div className="md:w-1/2 text-center md:text-left py-8 px-12">
+          <div className="space-y-10 mb-8">
             {lists &&
               lists.map((item, index) => (
-                <div key={index} className="p-4 bg-white rounded-lg shadow-lg">
-                  <p className="text-lg font-semibold">{item.heading}</p>
-                  <p className="text-sm text-gray-500">{item.subheading}</p>
-                  <p className="text-sm text-gray-400 mt-2">{item.paragraph}</p>
+                <div
+                  key={index}
+                  className="p-4 bg-white rounded-lg shadow-lg hover:bg-blue-500  hover:transition-colors "
+                >
+                  <p className="text-2xl font-semibold mb-2 ">{item.heading}</p>
+                  <p className="text-lg text-gray-500">{item.subheading}</p>
                 </div>
               ))}
           </div>

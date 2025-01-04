@@ -27,7 +27,7 @@ export default function HeroSection({
       <div className="relative z-10 text-center text-white p-4 flex flex-col items-center justify-center w-full">
         <div className="md:w-full text-center md:p-4  justify-center m-auto">
           <h2
-            className="md:text-8xl text-4xl font-bold mb-4 md:text-white text-white"
+            className="md:text-8xl text-4xl font-bold mb-4 md:text-white stroke-1 stroke-white  text-white"
             style={{
               textShadow: "rgb(0 0 0 / 11%) 2px 2px 8px",
               transition: "transform 0.1s ease-out"

@@ -9,28 +9,27 @@ export const homepageSection = {
   primaryButtonLink: "/about",
   secondaryButton: "View Freelancers",
   secondaryButtonLink: "/freelancers",
+  mainHeading: "It's fast and easy to sign up!",
+  mainParagraph:
+    "Whether you're looking to create something beautiful or needing someone to do, we've got your back!",
   images: [
     "https://res.cloudinary.com/ryry/image/upload/v1724678621/ry_boi_White_marble_statue_of_a_man_doing_jiu_jitsu_in_a_minima_acc07f02-a4a4-4747-a8bb-d1be38683a04_ex6lju.webp",
-    "https://res.cloudinary.com/ryry/image/upload/v1724673187/Screenshot_2024-08-26_at_12.51.28_g6jvtm.webp"
+    "https://res.cloudinary.com/ryry/image/upload/v1733573802/tinylotto-background_nuhsmt.webp",
+    "https://res.cloudinary.com/ryry/image/upload/v1728509870/public-design-jobs/HERO_g8nddw.webp",
+    "https://res.cloudinary.com/ryry/image/upload/v1728509828/public-design-jobs/ryan_j8742k.webp"
   ],
   lists: [
     {
-      heading: "Why Public Design Jobs Exists",
-      subheading: "An innovative platform for creatives.",
-      paragraph:
-        "Public Design Jobs connects freelancers with opportunities to showcase their work, collaborate, and grow their careers."
+      heading: "Step 1: Create Your Account",
+      subheading: "Your journey begins here."
     },
     {
-      heading: "Who can join?",
-      subheading: "Open to all creative freelancers.",
-      paragraph:
-        "Anyone with a creative talent, whether in design, photography, or writing, can join and start connecting with opportunities."
+      heading: "Step 2: Showcase Your Portfolio",
+      subheading: "Let your work shine."
     },
     {
-      heading: "How does it work?",
-      subheading: "A simple and intuitive platform.",
-      paragraph:
-        "Sign up, create a profile, upload your portfolio, and start exploring opportunities tailored to your skills."
+      heading: "Step 3: Connect and Collaborate",
+      subheading: "Opportunities await."
     }
   ]
 };

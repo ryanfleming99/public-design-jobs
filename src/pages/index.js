@@ -47,9 +47,9 @@ const Index = () => {
         secondaryButtonLink={homepageSection.secondaryButtonLink}
       />
       <ImageCarousel
-        heading={homepageSection.lists.heading}
+        mainHeading={homepageSection.mainHeading}
+        mainParagraph={homepageSection.mainParagraph}
         subheading={homepageSection.lists.subheading}
-        paragraph={homepageSection.lists.paragraph}
         lists={homepageSection.lists}
         images={homepageSection.images}
       />
