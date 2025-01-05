@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import AuthButton from "../pages/api/auth/signin";
 
 const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
