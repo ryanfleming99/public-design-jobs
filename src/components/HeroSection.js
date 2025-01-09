@@ -44,12 +44,12 @@ export default function HeroSection({
         </div>
         <div className="text-center justify-center m-auto flex space-between gap-6">
           {primaryButton && primaryButtonLink && (
-            <Link href={primaryButtonLink} className="btn btn-secondary">
+            <Link href={primaryButtonLink} className="btn btn-primary">
               {primaryButton}
             </Link>
           )}
           {secondaryButton && secondaryButtonLink && (
-            <Link href={secondaryButtonLink} className="btn btn-primary">
+            <Link href={secondaryButtonLink} className="btn btn-secondary">
               {secondaryButton}
             </Link>
           )}

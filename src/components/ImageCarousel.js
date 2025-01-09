@@ -15,16 +15,15 @@ const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
 
   return (
     <div>
-      <div className="md:pt-24 w-full flex items-center justify-center flex-col">
-        <p className="text-6xl font-bold mb-8">{mainHeading}</p>
-        <p className="text-2xl text-blue-600 mb-8">{mainParagraph}</p>
-        <AuthButton />
-      </div>
-
       <div
         id="section-two"
-        className="flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-24"
+        className="pt-12 px-6 md:pt-32 w-full flex items-center justify-center flex-col text-center"
       >
+        <p className="text-3xl md:text-5xl font-bold mb-4">{mainHeading}</p>
+        <p className="text-sm md:text-2xl text-blue-600">{mainParagraph}</p>
+      </div>
+
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-24 md:pt-18">
         {/* Left Side: Image */}
         <div className="md:w-1/2 h-3/6 md:h-[600px] max-w-[500px] w-full flex items-center justify-center">
           {images && images.length > 0 ? (
@@ -40,8 +39,8 @@ const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
           )}
         </div>
         {/* Right Side: Profiles */}
-        <div className="md:w-1/2 text-center md:text-left py-8 px-12">
-          <div className="space-y-10 mb-8">
+        <div className="md:w-1/2 text-center md:text-left md:py-8 md:px-12 px-6">
+          <div className="space-y-10 mb-4 md:mb-8">
             {lists &&
               lists.map((item, index) => (
                 <div

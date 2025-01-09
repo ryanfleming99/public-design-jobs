@@ -9,7 +9,7 @@ export const homepageSection = {
   primaryButtonLink: "/about",
   secondaryButton: "View Freelancers",
   secondaryButtonLink: "/freelancers",
-  mainHeading: "It's fast and easy to sign up!",
+  mainHeading: "Connecting designers with opportunities that matter",
   mainParagraph:
     "Whether you're looking to create something beautiful or needing someone to do, we've got your back!",
   images: [
