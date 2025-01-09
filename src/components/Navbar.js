@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { useSession } from "next-auth/react";
 import AuthButton from "../pages/api/auth/signin";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
-  const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 

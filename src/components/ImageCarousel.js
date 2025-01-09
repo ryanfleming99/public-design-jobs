@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import AuthButton from "../pages/api/auth/signin";
 
 const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
   const [currentImage, setCurrentImage] = useState(0);
