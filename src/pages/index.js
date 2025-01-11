@@ -38,7 +38,7 @@ const Index = () => {
       {/* Section 1 */}
       <Navbar /> {/* Navbar is included on every page */}
       <HeroSection
-        heading={homepageSection.heading}
+        h1={homepageSection.h1}
         subheading={homepageSection.subheading}
         backgroundImage={homepageSection.backgroundImage}
         primaryButton={homepageSection.primaryButton}
@@ -47,10 +47,9 @@ const Index = () => {
         secondaryButtonLink={homepageSection.secondaryButtonLink}
       />
       <ImageCarousel
-        mainHeading={homepageSection.mainHeading}
-        mainParagraph={homepageSection.mainParagraph}
-        subheading={homepageSection.lists.subheading}
-        lists={homepageSection.lists}
+        h2={homepageSection.h2}
+        mainParagraph={homepageSection.subheading}
+        lists={homepageSection.lists} // Removed unnecessary subheading reference
         images={homepageSection.images}
       />
       <FaqSection />

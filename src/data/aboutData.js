@@ -1,5 +1,5 @@
 export const aboutSection = {
-  heading: "Public Design Jobs",
+  h1: "Public Design Jobs",
   subheading:
     "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
   backgroundImage:

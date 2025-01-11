@@ -1,5 +1,5 @@
 export const homepageSection = {
-  heading: "Public Design Jobs",
+  h1: "Public Design Jobs",
   subheading:
     "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
   backgroundImage:
@@ -9,7 +9,7 @@ export const homepageSection = {
   primaryButtonLink: "/about",
   secondaryButton: "View Freelancers",
   secondaryButtonLink: "/freelancers",
-  mainHeading: "Connecting designers with opportunities that matter",
+  h2: "Connecting designers with opportunities that matter",
   mainParagraph:
     "Whether you're looking to create something beautiful or needing someone to do, we've got your back!",
   images: [
@@ -20,15 +20,15 @@ export const homepageSection = {
   ],
   lists: [
     {
-      heading: "Step 1: Create Your Account",
+      h2: "Step 1: Create Your Account",
       subheading: "Your journey begins here."
     },
     {
-      heading: "Step 2: Showcase Your Portfolio",
+      h2: "Step 2: Showcase Your Portfolio",
       subheading: "Let your work shine."
     },
     {
-      heading: "Step 3: Connect and Collaborate",
+      h2: "Step 3: Connect and Collaborate",
       subheading: "Opportunities await."
     }
   ]

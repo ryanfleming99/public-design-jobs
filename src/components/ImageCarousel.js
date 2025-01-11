@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { theme } from "../styles/theme";
 
-const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
+const ImageCarousel = ({ h2, mainHeading, mainParagraph, lists, images }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -13,13 +14,13 @@ const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
   }, [images.length]);
 
   return (
-    <div>
+    <div className={`${theme.wrappers.container} drop-shadow-lg`}>
       <div
         id="section-two"
         className="pt-12 px-6 md:pt-32 w-full flex items-center justify-center flex-col text-center"
       >
-        <p className="text-3xl md:text-5xl font-bold mb-4">{mainHeading}</p>
-        <p className="text-sm md:text-2xl text-blue-600">{mainParagraph}</p>
+        <p className={theme.typography.h2}>{h2}</p>
+        <p className={theme.typography.subheading}>{mainParagraph}</p>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-24 md:pt-18">
@@ -38,15 +39,15 @@ const ImageCarousel = ({ mainHeading, mainParagraph, lists, images }) => {
           )}
         </div>
         {/* Right Side: Profiles */}
-        <div className="md:w-1/2 text-center md:text-left md:py-8 md:px-12 px-6">
-          <div className="space-y-10 mb-4 md:mb-8">
+        <div className="md:w-1/2 md:py-8 md:px-12">
+          <div className="space-y-10 mb-4 md:mb-8 px-8 ">
             {lists &&
               lists.map((item, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-white rounded-lg shadow-lg hover:bg-blue-500  hover:transition-colors "
+                  className="bg-white rounded-lg shadow-lg hover:bg-blue-100 hover:transition-colors md:p-8"
                 >
-                  <p className="text-2xl font-semibold mb-2 ">{item.heading}</p>
+                  <p className="text-2xl font-semibold mb-2">{item.h2}</p>
                   <p className="text-lg text-gray-500">{item.subheading}</p>
                 </div>
               ))}

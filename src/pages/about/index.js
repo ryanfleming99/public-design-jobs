@@ -8,7 +8,7 @@ const index = () => {
     <>
       <Navbar />
       <HeroSection
-        heading={aboutSection.heading}
+        h1={aboutSection.heading}
         subheading={aboutSection.subheading}
         backgroundImage={aboutSection.backgroundImage}
         scrollToTarget={aboutSection.scrollToTarget}

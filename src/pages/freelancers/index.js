@@ -9,13 +9,13 @@ const index = () => {
     <>
       <Navbar />
       <HeroSection
-        heading={freelanceSection.heading}
+        h1={freelanceSection.heading}
         subheading={freelanceSection.subheading}
         backgroundImage={freelanceSection.backgroundImage}
         scrollToTarget={freelanceSection.scrollToTarget}
       />
       <ImageCarousel
-        heading={freelanceSection.lists.heading}
+        h1={freelanceSection.lists.heading}
         subheading={freelanceSection.lists.subheading}
         paragraph={freelanceSection.lists.paragraph}
         lists={freelanceSection.lists}
