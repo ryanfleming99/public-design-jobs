@@ -32,8 +32,8 @@ export default function HeroSection({
     >
       <div className={`${theme.wrappers.container}`}>
         {/* Text Content over the background */}
-        <div className="relative z-10 text-center text-white p-4 flex flex-col items-center justify-center w-full">
-          <div className="md:w-full text-center md:p-4 justify-center m-auto">
+        <div className="relative z-10 text-center text-white flex flex-col items-center justify-center w-full">
+          <div className="md:w-full text-center md:mb-6 justify-center m-auto">
             {/* Heading */}
             <h1 className={`${theme.typography.h1} drop-shadow-lg`}>{h1}</h1>
             {/* Subheading */}
@@ -42,7 +42,7 @@ export default function HeroSection({
             </p>
           </div>
           {/* Buttons */}
-          <div className="text-center justify-center m-auto flex space-between gap-6">
+          <div className="text-center justify-center w-1/2 flex space-between gap-6">
             {primaryButton && primaryButtonLink && (
               <Link href={primaryButtonLink} className="btn btn-primary">
                 {primaryButton}
