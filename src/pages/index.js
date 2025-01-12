@@ -36,7 +36,8 @@ const Index = () => {
   return (
     <div>
       {/* Section 1 */}
-      <Navbar /> {/* Navbar is included on every page */}
+      {/* Navbar is included on every page */}
+      <Navbar />
       <HeroSection
         h1={homepageSection.h1}
         subheading={homepageSection.subheading}
@@ -48,7 +49,7 @@ const Index = () => {
       />
       <ImageCarousel
         h2={homepageSection.h2}
-        mainParagraph={homepageSection.subheading}
+        mainParagraph={homepageSection.sectionTitle}
         lists={homepageSection.lists} // Removed unnecessary subheading reference
         images={homepageSection.images}
       />

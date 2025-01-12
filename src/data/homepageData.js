@@ -1,16 +1,19 @@
 export const homepageSection = {
   h1: "Public Design Jobs",
   subheading:
-    "The new platform for creative freelancers. Find work, showcase your talent, and grow your career.",
+    "Whether you're looking to create something beautiful or needing someone to do, we've got your back!",
+  h2: "There's never been a better time to get started",
+  sectionTitle:
+    "Calling all designers and recruiters! Join us today and take the first step toward amazing opportunities—sign up now to get started!",
   backgroundImage:
-    "https://res.cloudinary.com/ryry/image/upload/v1728138865/public-design-jobs/ry_boi_hyperrealistic_white_only_alabaster_statues_london_white_ee1414a5-55e3-46fd-98d4-e581eb856dad_2_rxkr0k.webp",
-  scrollToTarget: "homepage-section-two",
+    "https://res.cloudinary.com/ryry/image/upload/v1736690541/homepagebackground_cnoged.webp",
+  scrollToForm: "section-two",
+  scrollToTarget: "target",
   primaryButton: "Join us!",
   primaryButtonLink: "/about",
   secondaryButton: "View Freelancers",
   secondaryButtonLink: "/freelancers",
-  h2: "Connecting designers with opportunities that matter",
-  mainParagraph:
+  sectionParagraph:
     "Whether you're looking to create something beautiful or needing someone to do, we've got your back!",
   images: [
     "https://res.cloudinary.com/ryry/image/upload/v1724678621/ry_boi_White_marble_statue_of_a_man_doing_jiu_jitsu_in_a_minima_acc07f02-a4a4-4747-a8bb-d1be38683a04_ex6lju.webp",

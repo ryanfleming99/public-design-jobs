@@ -16,14 +16,16 @@ const ImageCarousel = ({ h2, mainParagraph, lists, images }) => {
   return (
     <div className={`${theme.wrappers.container} drop-shadow-lg`}>
       <div
-        id="section-two"
-        className="pt-6 md:pt-12 md:px-6 md:pt-32 w-full flex items-center justify-center flex-col text-center"
+        id="target"
+        className="pt-6 md:pt-12 pt-24 md:px-6 md:pt-32 w-full flex items-center justify-center flex-col text-center"
       >
-        <p className={theme.typography.h2}>{h2}</p>
-        <p className={theme.typography.subheading}>{mainParagraph}</p>
+        <h2 className={theme.typography.h2}>{h2}</h2>
+        <p className="${theme.typography.subheading} max-w-50">
+          {mainParagraph}
+        </p>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center  md:p-24 md:pt-18">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center p-8  md:p-24 md:pt-18">
         {/* Left Side: Image */}
         <div className="md:w-1/2 h-3/6 md:h-[600px] max-w-[500px] w-full flex items-center justify-center ">
           {images && images.length > 0 ? (
@@ -45,7 +47,7 @@ const ImageCarousel = ({ h2, mainParagraph, lists, images }) => {
               lists.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-lg hover:bg-blue-100 hover:transition-colors md:p-8 p-8"
+                  className="bg-white rounded-lg shadow-lg hover:bg-blue-800 hover:text-white hover:transition-colors md:p-8 p-8"
                 >
                   <p className="text-2xl font-semibold mb-2">{item.h2}</p>
                   <p className="text-lg text-gray-500">{item.subheading}</p>

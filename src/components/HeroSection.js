@@ -1,13 +1,7 @@
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { theme } from "../styles/theme";
-
-// Debugging: Log the theme object and its properties
-if (typeof window !== "undefined") {
-  console.log("Theme object:", theme);
-  console.log("Theme wrappers.container:", theme.wrappers.container);
-  console.log("Theme typography.h1:", theme.typography.h1);
-  console.log("Theme typography.subheading:", theme.typography.subheading);
-}
+import { gsap } from "gsap";
 
 export default function HeroSection({
   h1,
@@ -23,26 +17,82 @@ export default function HeroSection({
     return <div>No Image</div>;
   }
 
+  const headerRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Function to split text into letters and animate
+    const animateHeader = () => {
+      const header = headerRef.current;
+      //font colour update after animation completes
+
+      if (!header) return;
+
+      // Split the text content into letters
+      const text = h1.split("");
+      const letterSpans = text.map((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter === " " ? "\u00A0" : letter; // Handle spaces
+        span.style.display = "inline-block";
+        span.style.opacity = 0; // Start with invisible letters
+        span.style.transform = "translateY(50px)"; // Start off the position
+        span.style.textShadow = "rgba(58, 29, 32, 0.63) 7px 5px 7px";
+        return span;
+      });
+
+      // Clear existing content and append the letter spans
+      header.innerHTML = ""; // Clear existing content
+      letterSpans.forEach(span => header.appendChild(span));
+
+      // Animate the letters with GSAP
+      gsap.to(header.querySelectorAll("span"), {
+        color: "#ffffff",
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.05,
+        ease: "power.elastic"
+      });
+      const tl = gsap.timeline();
+
+      tl.to(
+        header.querySelectorAll("span"),
+        {
+          color: "white", // colour for text
+          duration: 4,
+          stagger: 0.05,
+          ease: "power1.circ.inOut"
+        },
+        "+=0.2" // Delay before color change starts
+      );
+    };
+
+    animateHeader(); // Call the function
+  }, [h1]);
+  // Re-run animation if the `h1` content changes
+
   return (
     <div
-      className="relative flex items-center justify-center min-h-screen h-screen bg-center"
+      ref={containerRef}
+      className="relative flex items-center justify-center min-h-screen h-screen bg-center bg-cover"
       style={{
         backgroundImage: `url(${backgroundImage})`
       }}
     >
-      <div className={`${theme.wrappers.container}`}>
-        {/* Text Content over the background */}
+      <div className={theme.wrappers.container}>
         <div className="relative z-10 text-center text-white flex flex-col items-center justify-center w-full">
-          <div className="md:w-full text-center md:mb-6 justify-center m-auto">
-            {/* Heading */}
-            <h1 className={`${theme.typography.h1} drop-shadow-lg`}>{h1}</h1>
-            {/* Subheading */}
-            <p className={`${theme.typography.subheading} drop-shadow-md`}>
+          <div className="md:w-2/3 text-center md:mb-6 justify-center m-auto">
+            <h1
+              ref={headerRef}
+              className={`${theme.typography.h1} drop-shadow-lg`}
+            >
+              {h1}
+            </h1>
+            <p className={`${theme.typography.subheading} drop-shadow-lg`}>
               {subheading}
             </p>
           </div>
-          {/* Buttons */}
-          <div className="text-center justify-center w-1/2 flex space-between gap-6">
+          <div className="text-center justify-center md:w-1/2 flex space-between gap-6 w-full">
             {primaryButton && primaryButtonLink && (
               <Link href={primaryButtonLink} className="btn btn-primary">
                 {primaryButton}
@@ -54,12 +104,11 @@ export default function HeroSection({
               </Link>
             )}
           </div>
-          {/* Bounce Icon */}
           <div className="flex justify-center mt-8">
             <div
               className="animate-bounce cursor-pointer"
               onClick={() => {
-                const targetElement = document.getElementById("section-two");
+                const targetElement = document.getElementById("target");
                 if (targetElement) {
                   targetElement.scrollIntoView({ behavior: "smooth" });
                 }
