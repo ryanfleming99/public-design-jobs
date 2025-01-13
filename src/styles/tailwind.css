@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply text-5xl md:text-8xl font-bold mb-6;
+    @apply text-4xl md:text-7xl font-bold mb-6;
      }
   h2 {
     @apply text-5xl font-semibold mb-6;
@@ -23,6 +23,7 @@
   h6 {
     @apply text-lg font-medium mb-2;
   }
+  
 }
 
 @layer components {
@@ -37,4 +38,8 @@
   .btn-secondary {
     @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
   }
+}
+
+.custom-gradient {
+  background-color: #112135;
 }

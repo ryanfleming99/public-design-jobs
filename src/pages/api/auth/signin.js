@@ -7,7 +7,7 @@ export default function AuthButton() {
     <>
       <button
         onClick={() => (session ? signOut() : signIn("google"))} // Toggle based on session
-        className="px-6 w-auto min-w-44 py-2  shadow-md hover:shadow-lg text-black max-w-40 flex justify-center align-center text-center text-md rounded-xl"
+        className="px-6 w-auto min-w-44 py-2   hover:shadow-lg text-black max-w-40 flex justify-center align-center text-center text-md rounded-xl drop-shadow-lg"
       >
         <div className="justify-center flex items-center space-evenly rounded-xl">
           {session ? (

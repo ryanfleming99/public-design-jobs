@@ -74,17 +74,17 @@ export default function HeroSection({
   return (
     <div
       ref={containerRef}
-      className="relative flex items-center justify-center min-h-screen h-screen bg-center bg-cover"
+      className="relative flex items-center justify-center min-h-screen h-screen bg-center bg-cover drop-shadow-lg"
       style={{
         backgroundImage: `url(${backgroundImage})`
       }}
     >
       <div className={theme.wrappers.container}>
         <div className="relative z-10 text-center text-white flex flex-col items-center justify-center w-full">
-          <div className="md:w-2/3 text-center md:mb-6 justify-center m-auto">
+          <div className="md:w-2/3 md:pt-24 text-center md:mb-6 justify-center m-auto ">
             <h1
               ref={headerRef}
-              className={`${theme.typography.h1} drop-shadow-lg`}
+              className={`${theme.typography.h1} drop-shadow-lg `}
             >
               {h1}
             </h1>

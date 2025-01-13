@@ -6,7 +6,7 @@ export const homepageSection = {
   sectionTitle:
     "Calling all designers and recruiters! Join us today and take the first step toward amazing opportunities—sign up now to get started!",
   backgroundImage:
-    "https://res.cloudinary.com/ryry/image/upload/v1736690541/homepagebackground_cnoged.webp",
+    "https://res.cloudinary.com/ryry/image/upload/v1736719513/ry_boi_beautiful_artistic_city_center_of_london_3d_isometric_ci_37e4e2d9-c409-48e2-adf5-63523e85cc90_1_en6hyc.webp",
   scrollToForm: "section-two",
   scrollToTarget: "target",
   primaryButton: "Join us!",

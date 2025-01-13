@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { theme } from "../styles/theme";
+import AuthButton from "../pages/api/auth/signin";
 
-const ImageCarousel = ({ h2, mainParagraph, lists, images }) => {
+const ImageCarousel = ({ h2, className, mainParagraph, lists, images }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -14,20 +15,20 @@ const ImageCarousel = ({ h2, mainParagraph, lists, images }) => {
   }, [images.length]);
 
   return (
-    <div className={`${theme.wrappers.container} drop-shadow-lg`}>
+    <div className="custom-gradient ">
       <div
         id="target"
-        className="pt-6 md:pt-12 pt-24 md:px-6 md:pt-32 w-full flex items-center justify-center flex-col text-center"
+        className={`  pt-24 md:px-6 md:pt-36 w-full flex items-center justify-center flex-col text-center  ${className}`}
       >
-        <h2 className={theme.typography.h2}>{h2}</h2>
-        <p className="${theme.typography.subheading} max-w-50">
+        <h2 className={`${theme.typography.h2} text-white`}>{h2}</h2>
+        <p className={`${theme.typography.subheading} text-white`}>
           {mainParagraph}
         </p>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center p-8  md:p-24 md:pt-18">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center p-8  md:p-24 md:pt-16">
         {/* Left Side: Image */}
-        <div className="md:w-1/2 h-3/6 md:h-[600px] max-w-[500px] w-full flex items-center justify-center ">
+        <div className="md:w-1/2 h-3/6 md:h-[600px] max-w-[500px] w-full flex items-center justify-center md:mb-16 ">
           {images && images.length > 0 ? (
             <Image
               src={images[currentImage]}
@@ -53,6 +54,32 @@ const ImageCarousel = ({ h2, mainParagraph, lists, images }) => {
                   <p className="text-lg text-gray-500">{item.subheading}</p>
                 </div>
               ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <div
+              className="animate-bounce cursor-pointer"
+              onClick={() => {
+                const targetElement = document.getElementById("target-two");
+                if (targetElement) {
+                  targetElement.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12 text-white drop-shadow-lg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

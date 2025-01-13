@@ -10,7 +10,7 @@ const FaqSection = () => {
     <div>
       {/* FAQ Section */}
       <div
-        id="target-section-two"
+        id="target-two"
         className="flex flex-col items-center justify-center h-auto h-3/6 p-6 md:p-24"
       >
         {/* Centered FAQ Section */}

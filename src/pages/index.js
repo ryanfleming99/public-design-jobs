@@ -5,6 +5,8 @@ import FaqSection from "../components/FaqSection";
 import ImageCarousel from "../components/ImageCarousel";
 import Footer from "../components/Footer";
 import { homepageSection } from "../data/homepageData";
+import { theme } from "../styles/theme";
+import FormSection from "../components/common/Form";
 
 const Index = () => {
   // useEffect(() => {
@@ -48,12 +50,14 @@ const Index = () => {
         secondaryButtonLink={homepageSection.secondaryButtonLink}
       />
       <ImageCarousel
+        className={theme.wrappers.gradient}
         h2={homepageSection.h2}
         mainParagraph={homepageSection.sectionTitle}
         lists={homepageSection.lists} // Removed unnecessary subheading reference
         images={homepageSection.images}
       />
       <FaqSection />
+      <FormSection></FormSection>
       <Footer />
       {/* Centered Bounce Arrow
       <div className="flex justify-center">

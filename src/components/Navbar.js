@@ -35,23 +35,27 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 md:py-4 ${
         isScrolled
-          ? "bg-white  shadow-md transition-100 md:py-2 "
-          : "bg-transparent"
+          ? "bg-white shadow-md transition-100 md:py-2 "
+          : "bg-transparent shadow-md"
       }`}
     >
-      <div className="flex flex-wrap items-center md:py-4 justify-between max-w-screen-xl mx-auto bg-white md:bg-transparent">
+      <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto bg-white md:bg-transparent pt-2 ">
         {/* Logo/Title */}
         <Link
           href="https://www.publicdesignjobs.co.uk"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="self-center md:text-lg font-semibold whitespace-nowrap md:text-black drop-shadow-lg ">
+          <span
+            className={` ${
+              isScrolled ? "!text-black" : "!text-white"
+            } self-center md:text-xl font-semibold whitespace-nowrap md:text-black drop-shadow-lg md:text-white drop-shadow-lg `}
+          >
             Happy {day}!
           </span>
         </Link>
 
         {/* AuthButton for Desktop */}
-        <div className="hidden md:flex items-center md:order-2 space-x-4 rounded-md bg-white">
+        <div className="hidden md:flex items-center md:order-2 space-x-4 rounded-md bg-white ">
           <AuthButton />
         </div>
 
@@ -89,12 +93,18 @@ export default function Navbar() {
             isMenuOpen ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 gap-16 md:space-x-8 rtl:space-x-reverse">
+          <ul
+            className={
+              "flex flex-col mt-4 font-medium md:flex-row md:mt-0 gap-16 md:space-x-8 rtl:space-x-reverse "
+            }
+          >
             {router.pathname !== "/" && (
               <li>
                 <Link
                   href="/"
-                  className="block py-2 px-3 md:drop-shadow-lg   text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={`block md:text-white md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-70  ${
+                    isScrolled ? "!text-black" : "!text-white"
+                  }`}
                 >
                   Home
                 </Link>
@@ -102,34 +112,42 @@ export default function Navbar() {
             )}
             <li>
               <Link
-                href="/work"
-                className="block text-lg md:drop-shadow-lg py-2 px-3 md:text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                href="/about"
+                className={`block md:text-white md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-70  ${
+                  isScrolled ? "!text-black" : "!text-white"
+                }`}
               >
                 About us
               </Link>
             </li>
             <li>
               <Link
-                href="/contact"
-                className="block text-lg md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                href="/support"
+                className={`block md:text-white md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-70  ${
+                  isScrolled ? "!text-black" : "!text-white"
+                }`}
               >
                 Support
               </Link>
             </li>
             <li>
               <Link
-                href="/post"
-                className="block text-xl py-2 px-3 md:text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                href="/freelancers"
+                className={`block md:text-white md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-70  ${
+                  isScrolled ? "!text-black" : "!text-white"
+                }`}
               >
-                Blog
+                Freelancers
               </Link>
             </li>
             <li>
               <Link
-                href="/freelancers"
-                className="block text-xl py-2 px-3 md:text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                href="/contact"
+                className={`block md:text-white md:drop-shadow-lg  py-2 px-3 md:text-blackborder-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-70  ${
+                  isScrolled ? "!text-black" : "!text-white"
+                }`}
               >
-                Freelancers
+                Contact
               </Link>
             </li>
           </ul>
