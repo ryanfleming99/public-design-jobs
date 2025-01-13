@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const FormSection = ({ h2, mainParagraph }) => {
+const FormSection = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = e => {
@@ -70,7 +70,7 @@ const FormSection = ({ h2, mainParagraph }) => {
         )}
       </div>
       <p className="text-lg md:text-xl text-gray-200 mt-10">
-        We won't send you junk mail!
+        We won/`t send you junk mail!
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { theme } from "../styles/theme";
 import { gsap } from "gsap";
@@ -12,64 +12,49 @@ export default function HeroSection({
   secondaryButton,
   secondaryButtonLink
 }) {
-  if (!backgroundImage) {
-    console.error("Background image is missing");
-    return <div>No Image</div>;
-  }
-
   const headerRef = useRef(null);
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    // Function to split text into letters and animate
-    const animateHeader = () => {
-      const header = headerRef.current;
-      //font colour update after animation completes
+  // Function to animate header
+  const animateHeader = useCallback(() => {
+    const header = headerRef.current;
+    if (!header || !h1) return;
 
-      if (!header) return;
+    const text = h1.split("");
+    header.innerHTML = ""; // Clear existing content
 
-      // Split the text content into letters
-      const text = h1.split("");
-      const letterSpans = text.map((letter, index) => {
-        const span = document.createElement("span");
-        span.textContent = letter === " " ? "\u00A0" : letter; // Handle spaces
-        span.style.display = "inline-block";
-        span.style.opacity = 0; // Start with invisible letters
-        span.style.transform = "translateY(50px)"; // Start off the position
-        span.style.textShadow = "rgba(58, 29, 32, 0.63) 7px 5px 7px";
-        return span;
-      });
+    text.forEach(letter => {
+      const span = document.createElement("span");
+      span.textContent = letter === " " ? "\u00A0" : letter;
+      span.style.display = "inline-block";
+      span.style.opacity = 0;
+      span.style.transform = "translateY(50px)";
+      span.style.textShadow = "rgba(58, 29, 32, 0.63) 7px 5px 7px";
+      header.appendChild(span);
+    });
 
-      // Clear existing content and append the letter spans
-      header.innerHTML = ""; // Clear existing content
-      letterSpans.forEach(span => header.appendChild(span));
+    // GSAP Animation
+    gsap.to(header.querySelectorAll("span"), {
+      color: "#ffffff",
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.05,
+      ease: "power1.out"
+    });
 
-      // Animate the letters with GSAP
-      gsap.to(header.querySelectorAll("span"), {
-        color: "#ffffff",
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.05,
-        ease: "power.elastic"
-      });
-      const tl = gsap.timeline();
-
-      tl.to(
-        header.querySelectorAll("span"),
-        {
-          color: "white", // colour for text
-          duration: 4,
-          stagger: 0.05,
-          ease: "power1.circ.inOut"
-        },
-        "+=0.2" // Delay before color change starts
-      );
-    };
-
-    animateHeader(); // Call the function
+    gsap.timeline().to(header.querySelectorAll("span"), {
+      color: "white",
+      duration: 4,
+      stagger: 0.05,
+      ease: "power1.circ.inOut"
+    });
   }, [h1]);
-  // Re-run animation if the `h1` content changes
+
+  // Trigger animation on component mount and when `h1` changes
+  useEffect(() => {
+    animateHeader();
+  }, [animateHeader]);
 
   return (
     <div
@@ -81,13 +66,11 @@ export default function HeroSection({
     >
       <div className={theme.wrappers.container}>
         <div className="relative z-10 text-center text-white flex flex-col items-center justify-center w-full">
-          <div className="md:w-2/3 md:pt-24 text-center md:mb-6 justify-center m-auto ">
+          <div className="md:w-2/3 md:pt-24 text-center md:mb-6 justify-center m-auto">
             <h1
               ref={headerRef}
-              className={`${theme.typography.h1} drop-shadow-lg `}
-            >
-              {h1}
-            </h1>
+              className={`${theme.typography.h1} drop-shadow-lg`}
+            ></h1>
             <p className={`${theme.typography.subheading} drop-shadow-lg`}>
               {subheading}
             </p>

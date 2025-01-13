@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../components/Navbar"; // Import Navbar
 import Section from "../../components/Section";
 import FaqSection from "../../components/FaqSection";
-import ImageCarousel from "../../components/ImageCarousel";
 import Footer from "../../components/Footer";
 import { aboutSection } from "../../data/aboutData";
 

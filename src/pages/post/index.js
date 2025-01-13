@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar"; // Import Navbar
-import HeroSection from "../components/HeroSection";
-import FaqSection from "../components/FaqSection";
-import ImageCarousel from "../components/ImageCarousel";
-import Footer from "../components/Footer";
-import { homepageSection } from "../data/homepageData";
+import Navbar from "../../components/Navbar"; // Import Navbar
+import HeroSection from "../../components/HeroSection";
+import FaqSection from "../../components/FaqSection";
+import ImageCarousel from "../../components/ImageCarousel";
+import Footer from "../../components/Footer";
+import { homepageSection } from "../../data/homepageData";
 
 const Index = () => {
   // useEffect(() => {

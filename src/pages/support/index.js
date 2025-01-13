@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar"; // Import Navbar
-import HeroSection from "../components/HeroSection";
-import FaqSection from "../components/FaqSection";
-import ImageCarousel from "../components/ImageCarousel";
-import Footer from "../components/Footer";
-import { homepageSection } from "../data/homepageData";
+import Navbar from "../../components/Navbar"; // Import Navbar
+import HeroSection from "../../components/HeroSection";
+import FaqSection from "../../components/FaqSection";
+import ImageCarousel from "../../components/ImageCarousel";
+import Footer from "../../components/Footer";
+import { supportSection } from "../../data/supportData";
 
 const Index = () => {
   // useEffect(() => {
@@ -38,19 +38,19 @@ const Index = () => {
       {/* Section 1 */}
       <Navbar /> {/* Navbar is included on every page */}
       <HeroSection
-        h1={homepageSection.h1}
-        subheading={homepageSection.subheading}
-        backgroundImage={homepageSection.backgroundImage}
-        primaryButton={homepageSection.primaryButton}
-        primaryButtonLink={homepageSection.primaryButtonLink}
-        secondaryButton={homepageSection.secondaryButton}
-        secondaryButtonLink={homepageSection.secondaryButtonLink}
+        h1={supportSection.h1}
+        subheading={supportSection.subheading}
+        backgroundImage={supportSection.backgroundImage}
+        primaryButton={supportSection.primaryButton}
+        primaryButtonLink={supportSection.primaryButtonLink}
+        secondaryButton={supportSection.secondaryButton}
+        secondaryButtonLink={supportSection.secondaryButtonLink}
       />
       <ImageCarousel
-        h2={homepageSection.h2}
-        mainParagraph={homepageSection.sectionTitle}
-        lists={homepageSection.lists} // Removed unnecessary subheading reference
-        images={homepageSection.images}
+        h2={supportSection.h2}
+        mainParagraph={supportSection.sectionTitle}
+        lists={supportSection.lists} // Removed unnecessary subheading reference
+        images={supportSection.images}
       />
       <FaqSection />
       <Footer />

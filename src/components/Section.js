@@ -1,12 +1,6 @@
-import Link from "next/link";
 import { theme } from "../styles/theme";
 
-export default function Section({
-  h1,
-  subheading,
-  backgroundImage,
-  sectionTitle
-}) {
+export default function Section({ h1, subheading, backgroundImage }) {
   if (!backgroundImage) {
     console.error("Background image is missing");
     return <div>No Image</div>;
