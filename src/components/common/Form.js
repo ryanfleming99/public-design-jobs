@@ -70,7 +70,7 @@ const FormSection = () => {
         )}
       </div>
       <p className="text-lg md:text-xl text-gray-200 mt-10">
-        We won/`t send you junk mail!
+        We won`t send you junk mail!
       </p>
     </div>
   );

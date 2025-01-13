@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^11.1.0",
     "flowbite-react": "^0.10.2",
     "gsap": "^3.12.5",
     "next": "^15.1.3",
