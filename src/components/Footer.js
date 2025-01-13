@@ -101,7 +101,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="px-24 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+          <div className="md:px-24 px-6 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
             <span className="text-sm text-black dark:text-gray-300 sm:text-center">
               © 2025{" "}
               <Link href="https://publicdesignjobs.co.uk/">

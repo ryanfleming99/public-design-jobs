@@ -5,6 +5,8 @@ import FaqSection from "../components/FaqSection";
 import ImageCarousel from "../components/ImageCarousel";
 import Footer from "../components/Footer";
 import { homepageSection } from "../data/homepageData";
+import { theme } from "../styles/theme";
+import FormSection from "../components/common/Form";
 
 const Index = () => {
   // useEffect(() => {
@@ -36,9 +38,10 @@ const Index = () => {
   return (
     <div>
       {/* Section 1 */}
-      <Navbar /> {/* Navbar is included on every page */}
+      {/* Navbar is included on every page */}
+      <Navbar />
       <HeroSection
-        heading={homepageSection.heading}
+        h1={homepageSection.h1}
         subheading={homepageSection.subheading}
         backgroundImage={homepageSection.backgroundImage}
         primaryButton={homepageSection.primaryButton}
@@ -47,13 +50,14 @@ const Index = () => {
         secondaryButtonLink={homepageSection.secondaryButtonLink}
       />
       <ImageCarousel
-        mainHeading={homepageSection.mainHeading}
-        mainParagraph={homepageSection.mainParagraph}
-        subheading={homepageSection.lists.subheading}
-        lists={homepageSection.lists}
+        className={theme.wrappers.gradient}
+        h2={homepageSection.h2}
+        mainParagraph={homepageSection.sectionTitle}
+        lists={homepageSection.lists} // Removed unnecessary subheading reference
         images={homepageSection.images}
       />
       <FaqSection />
+      <FormSection></FormSection>
       <Footer />
       {/* Centered Bounce Arrow
       <div className="flex justify-center">

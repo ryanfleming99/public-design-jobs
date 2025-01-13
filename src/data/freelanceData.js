@@ -1,7 +1,7 @@
 export const freelanceSection = {
-  heading: "Discover Creative Freelancers",
+  h1: "Discover Creative Freelancers",
   subheading:
-    "Explore our diverse community of talented freelancers. Check out their portfolios, connect for collaboration, and find the perfect fit for your design project",
+    "Explore our diverse community of talented freelancers. Check out their portfolios, connect for collaboration, and find the perfect fit for your design project.",
   backgroundImage:
     "https://res.cloudinary.com/ryry/image/upload/v1731328905/projects-background_fvsuva.jpg",
   scrollToTarget: "homepage-section-two",
@@ -11,19 +11,19 @@ export const freelanceSection = {
   ],
   lists: [
     {
-      heading: "What is Public Design Jobs?",
+      h1: "What is Public Design Jobs?",
       subheading: "An innovative platform for creatives.",
       paragraph:
         "Public Design Jobs connects freelancers with opportunities to showcase their work, collaborate, and grow their careers."
     },
     {
-      heading: "Who can join?",
+      h1: "Who can join?",
       subheading: "Open to all creative freelancers.",
       paragraph:
         "Anyone with a creative talent, whether in design, photography, or writing, can join and start connecting with opportunities."
     },
     {
-      heading: "How does it work?",
+      h1: "How does it work?",
       subheading: "A simple and intuitive platform.",
       paragraph:
         "Sign up, create a profile, upload your portfolio, and start exploring opportunities tailored to your skills."

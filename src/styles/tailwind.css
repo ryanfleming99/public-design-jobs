@@ -4,9 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-4xl md:text-7xl font-bold mb-6;
+     }
+  h2 {
+    @apply text-5xl font-semibold mb-6;
+  }
+  h3 {
+    @apply text-3xl font-medium mb-4;
+  }
+  h4 {
+    @apply text-2xl font-medium mb-4;
+  }
+  h5 {
+    @apply text-xl font-medium mb-2;
+  }
+  h6 {
+    @apply text-lg font-medium mb-2;
+  }
+  
+}
+
 @layer components {
   .btn {
-    @apply inline-block px-4 py-2 rounded font-medium transition duration-200 max-w-48 w-auto md:min-w-full md:max-w-28  px-8;
+    @apply inline-block md:px-4 py-2 rounded font-medium transition duration-200 md:min-w-48  px-8;
   }
 
   .btn-primary {
@@ -16,4 +38,8 @@
   .btn-secondary {
     @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
   }
+}
+
+.custom-gradient {
+  background-color: #112135;
 }
