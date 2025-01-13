@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../components/Navbar"; // Import Navbar
 import HeroSection from "../../components/HeroSection";
 import { welcomeSection } from "../../data/welcomeData";
-import { theme } from "../../styles/theme";
 
 const Index = () => {
   // useEffect(() => {
