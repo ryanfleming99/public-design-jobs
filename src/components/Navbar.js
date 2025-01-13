@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AuthButton from "../pages/api/auth/signin";
+import AuthButton from "../components/AuthButton";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
